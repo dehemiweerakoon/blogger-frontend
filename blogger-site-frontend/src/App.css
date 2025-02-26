@@ -1,0 +1,58 @@
+.home-page{
+    margin: 0;
+    background-image: url('./assets/home2.png');
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.mobile-only{
+  visibility: hidden;
+}
+.nav-dis{
+    background-color:transparent !important;
+    position:sticky !important;
+    top: 0;
+    z-index: 5;
+    
+}
+.typing {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .cursor {
+    animation: blink 0.8s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+ .home-page{
+  
+ }
+ .para{
+  background-color: #153969;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  position: relative;
+ }
+ .typing{
+  color: rgb(6, 6, 6) !important;
+ }
+ .back{
+  background-image: url('./assets/home3.png');
+  background-size: cover;
+  height: 40vh;
+  margin-bottom: 5px;
+ }
+ .mobile-only{
+  visibility: visible;
+}
+
+  }
+  
