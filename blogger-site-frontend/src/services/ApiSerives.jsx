@@ -36,3 +36,19 @@ export const postRequest = async(path,data) =>{
      }
     }
  }
+ export const putRequest = async(path,data) =>{
+    try{
+        console.log("hiiiii")
+        console.log(token)
+        const respose = await axios.put(base_url+path,data);
+        console.log(respose);
+        return respose;
+    }catch(error){
+        if(error.respose.status ===401){
+            sessionStorage.removeItem("token")
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("user_id")
+            window.location.href = "/login";
+        }
+    }
+ }
