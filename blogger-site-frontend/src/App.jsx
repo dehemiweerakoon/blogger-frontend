@@ -21,7 +21,7 @@ function App() {
           <Route path='/blog/:id' element={<ViewBlog/>}/>
           <Route path='/blog/edit' element={<UpdateBlog/>}/>
           <Route path='/tabs' element={<TabContent/>}/>
-          <Route path='/blog/update' element={<BlogEdit/>}/>
+          <Route path='/blog/update/:id' element={<BlogEdit/>}/>
       </Route>
       <Route path='/login' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>

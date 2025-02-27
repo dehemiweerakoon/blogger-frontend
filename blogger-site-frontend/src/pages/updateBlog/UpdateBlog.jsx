@@ -40,7 +40,7 @@ const UpdateBlog = () => {
                                             {blog.content.split(' ').slice(0,50).join(' ')}
                                             ...
                                             </Card.Text> 
-                                          <Link to={`/blog/${blog.id}`}><Button  className='mt-5 rounded-pill' style={{backgroundColor:"#4870a4",border:"#4870a4"}}>Edit Blog</Button></Link>  
+                                          <Link to={`/blog/update/${blog.id}`}><Button  className='mt-5 rounded-pill' style={{backgroundColor:"#4870a4",border:"#4870a4"}}>Edit Blog</Button></Link>  
                                         </Card.Body>
                                         </Card>
                                     </Col>

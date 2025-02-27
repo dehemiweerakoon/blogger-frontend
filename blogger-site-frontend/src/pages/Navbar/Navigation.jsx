@@ -16,7 +16,7 @@ const Navigation = () => {
   }
   return (
     <>
-      <Navbar expand="lg" className="nav-dis shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+      <Navbar expand="lg" className="nav-dis shadow-sm p-3 mb-5 bg-body-tertiary rounded">
       <Container>  
         <Image src={blogger} rounded className='m-1'/>
         <Navbar.Brand href="/home">My Blogger</Navbar.Brand>

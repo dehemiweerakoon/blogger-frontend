@@ -12,19 +12,21 @@ const Register = () => {
     const navigate = useNavigate();
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
+    const [email,setEmail] = useState("");
     const [error,setError] = useState("");
 
     const login = async()=>{
-        ///
-        console.log("hiiii")
         const data = {
             "username":username,
-            "password":password
+            "email":email,
+            "password":password,
+            
         }
+        console.log(data);
         try{
-               const response = await axios.post('http://localhost:8080/auth/login',data);
-        if(response.status!=200){
-            console.log("Incorrect username or password....")
+               const response = await axios.post('http://localhost:8080/auth/register',data);
+        if(response.status===401){
+            console.log("Incorrect username or password.... hi")
             setError("Incorrect username or password");
             return;
         }
@@ -59,13 +61,12 @@ const Register = () => {
             </Form.Group>
             <Form.Group>
                 <Form.Label >Email</Form.Label>
-        <Form.Control  type="email" placeholder="Type your email" className='mb-3  border-0 border-bottom rounded-pill' value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
+        <Form.Control  type="email" placeholder="Type your email" className='mb-3  border-0 border-bottom rounded-pill' value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
             </Form.Group>
         <Form.Group>
             <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Type your password"  className='rounded-pill' value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
         </Form.Group>
-
         </Row>
     </Form>
     <Button type='submit' className="rounded-pill mt-4 mb-1" style={{backgroundColor:"#4b0082",border:'#4b0082'}} onClick={login}>Login</Button>
