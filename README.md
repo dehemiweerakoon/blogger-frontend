@@ -1,7 +1,3 @@
-Here's a **README** for your **React Blogger frontend** using **Vite, React Bootstrap, and Axios**:  
-
----
-
 # Blogger Frontend (Vite + React + React Bootstrap + Axios)
 
 This is the frontend of a Blogger application built with **Vite**, **React**, **React Bootstrap**, and **Axios**. It provides a user-friendly interface for **blog management**, including authentication and CRUD operations.
