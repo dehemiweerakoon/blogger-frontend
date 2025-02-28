@@ -7,6 +7,7 @@ import twitter from '../../assets/twitter (1).png'
 import home from '../../assets/home.png';
 import blog from '../../assets/blog-list.png'
 import update from '../../assets/update.png';
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
   <Container fluid className='mt-5 p-4  text-white' style={{backgroundColor:"#718bab"}}>
@@ -23,9 +24,9 @@ const Footer = () => {
     <Col md={8}>
     <div className='d-flex  flex-row justify-content-start'>
         <ul style={{listStyle:"none"}}>
-            <li><Image src={home} className='m-1'/>home</li>
-            <li><Image src={blog} className='m-1'/>Blog List</li>
-            <li><Image src={update} className='m-1'/>Update Blog</li>
+           <Link to="/home" style={{color:"white",textDecoration:"none"}}><li><Image src={home} className='m-1'/>home</li></Link> 
+           <Link to="/blog-list" style={{color:"white",textDecoration:"none"}}> <li><Image src={blog} className='m-1'/>Blog List</li></Link>
+            <Link to="/blog/edit" style={{color:"white",textDecoration:"none"}}><li><Image src={update} className='m-1'/>Update Blog</li></Link>
         </ul>
     </div>
     </Col>

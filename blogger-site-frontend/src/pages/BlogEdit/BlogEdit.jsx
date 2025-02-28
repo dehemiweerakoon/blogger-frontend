@@ -5,10 +5,10 @@ import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap'
 import { useParams } from 'react-router-dom';
 import blo from '../../assets/blo.png';
 import { ToastContainer, toast } from 'react-toastify'
-import { getRequest, postRequest, putRequest } from '../../services/ApiSerives';
+import { putRequest } from '../../services/ApiSerives';
 export const BlogEdit = () => {
 
- const blog_id = useParams();
+ const {id} = useParams();
  const [title,setTitle] = useState("");
  const [content,setContent] = useState("");
  const [message,setMessage] = useState("");
@@ -19,7 +19,7 @@ export const BlogEdit = () => {
  
    try{
        const data = {
-        "id":parseInt(blo),
+        "id":parseInt(id),
         "title":title,
         "content":content,
         "user":{
